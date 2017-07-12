@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollView_Paging_Version_1_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,43 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRJ-fa-TLi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="562"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="shw-9e-wa9"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="F4t-fy-MQ3">
+                                <rect key="frame" x="0.0" y="563" width="600" height="37"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="75n-wp-JQQ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="pageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ELp-sy-ZJR"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sRJ-fa-TLi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Mpl-2V-uIY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F4t-fy-MQ3" secondAttribute="bottom" id="X3G-R6-rLv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sRJ-fa-TLi" secondAttribute="trailing" constant="-20" id="eN1-hq-gfk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F4t-fy-MQ3" secondAttribute="trailing" constant="-20" id="ej9-5I-2rE"/>
+                            <constraint firstItem="sRJ-fa-TLi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="f5v-KZ-Jkh"/>
+                            <constraint firstItem="F4t-fy-MQ3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="hQn-dc-zZZ"/>
+                            <constraint firstItem="F4t-fy-MQ3" firstAttribute="top" secondItem="sRJ-fa-TLi" secondAttribute="bottom" constant="1" id="nQV-uP-ZbQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="F4t-fy-MQ3" id="pny-pi-zeR"/>
+                        <outlet property="scrollView" destination="sRJ-fa-TLi" id="DNc-b3-jBb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="388" y="317"/>
         </scene>
     </scenes>
 </document>

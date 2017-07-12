@@ -12,6 +12,10 @@
 		DE2AAD261F168A93001C4E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2AAD241F168A93001C4E13 /* Main.storyboard */; };
 		DE2AAD281F168A93001C4E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE2AAD271F168A93001C4E13 /* Assets.xcassets */; };
 		DE2AAD2B1F168A93001C4E13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2AAD291F168A93001C4E13 /* LaunchScreen.storyboard */; };
+		DE2AAD361F168D3F001C4E13 /* shop1-0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE2AAD331F168D3F001C4E13 /* shop1-0.jpg */; };
+		DE2AAD371F168D3F001C4E13 /* shop1-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE2AAD341F168D3F001C4E13 /* shop1-1.jpg */; };
+		DE2AAD381F168D3F001C4E13 /* shop1-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE2AAD351F168D3F001C4E13 /* shop1-2.jpg */; };
+		DE2AAD3A1F1692BF001C4E13 /* shop1-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE2AAD391F1692BF001C4E13 /* shop1-3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		DE2AAD271F168A93001C4E13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE2AAD2A1F168A93001C4E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE2AAD2C1F168A93001C4E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE2AAD331F168D3F001C4E13 /* shop1-0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shop1-0.jpg"; sourceTree = "<group>"; };
+		DE2AAD341F168D3F001C4E13 /* shop1-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shop1-1.jpg"; sourceTree = "<group>"; };
+		DE2AAD351F168D3F001C4E13 /* shop1-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shop1-2.jpg"; sourceTree = "<group>"; };
+		DE2AAD391F1692BF001C4E13 /* shop1-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shop1-3.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 		DE2AAD1F1F168A93001C4E13 /* ScrollView Paging Version 1.1 */ = {
 			isa = PBXGroup;
 			children = (
+				DE2AAD321F168D27001C4E13 /* Resource */,
 				DE2AAD201F168A93001C4E13 /* AppDelegate.swift */,
 				DE2AAD221F168A93001C4E13 /* ViewController.swift */,
 				DE2AAD241F168A93001C4E13 /* Main.storyboard */,
@@ -62,6 +71,17 @@
 				DE2AAD2C1F168A93001C4E13 /* Info.plist */,
 			);
 			path = "ScrollView Paging Version 1.1";
+			sourceTree = "<group>";
+		};
+		DE2AAD321F168D27001C4E13 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DE2AAD391F1692BF001C4E13 /* shop1-3.jpg */,
+				DE2AAD331F168D3F001C4E13 /* shop1-0.jpg */,
+				DE2AAD341F168D3F001C4E13 /* shop1-1.jpg */,
+				DE2AAD351F168D3F001C4E13 /* shop1-2.jpg */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +116,7 @@
 				TargetAttributes = {
 					DE2AAD1C1F168A93001C4E13 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = AGY9E5E6J5;
 					};
 				};
 			};
@@ -124,6 +145,10 @@
 			files = (
 				DE2AAD2B1F168A93001C4E13 /* LaunchScreen.storyboard in Resources */,
 				DE2AAD281F168A93001C4E13 /* Assets.xcassets in Resources */,
+				DE2AAD3A1F1692BF001C4E13 /* shop1-3.jpg in Resources */,
+				DE2AAD371F168D3F001C4E13 /* shop1-1.jpg in Resources */,
+				DE2AAD361F168D3F001C4E13 /* shop1-0.jpg in Resources */,
+				DE2AAD381F168D3F001C4E13 /* shop1-2.jpg in Resources */,
 				DE2AAD261F168A93001C4E13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,10 +276,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ScrollView Paging Version 1.1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Viet-s-Lab.ScrollView-Paging-Version-1-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -262,10 +290,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ScrollView Paging Version 1.1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Viet-s-Lab.ScrollView-Paging-Version-1-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -288,6 +319,7 @@
 				DE2AAD311F168A93001C4E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
